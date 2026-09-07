@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Version de PRODUCTION : aucun trafic en clair.
+
+  Les relevés contiennent des positions précises de domiciles ; ils ne doivent
+  jamais circuler sans chiffrement sur un réseau que l'on ne maîtrise pas.
+  La variante de débogage (src/debug) assouplit cette règle pour permettre
+  les essais sur le réseau local, sans tunnel.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false"/>
+</network-security-config>

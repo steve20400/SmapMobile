@@ -1,0 +1,49 @@
+# ══════════════════════════════════════════════════════════════════
+# SMAP — Compilation automatique de l'APK dans le cloud (GRATUIT)
+#
+# Mode d'emploi (aucun PC puissant requis) :
+#   1. créer un compte gratuit sur github.com
+#   2. créer un dépôt (« New repository »), par ex. « smap-mobile »
+#   3. y téléverser TOUT le contenu du dossier smap-mobile
+#      (« uploading an existing file » accepte le glisser-déposer)
+#   4. onglet « Actions » → le build démarre seul (~8 min)
+#   5. cliquer sur l'exécution terminée → section « Artifacts »
+#      → télécharger « smap-collecteur-apk » → dedans : app-debug.apk
+#   6. copier app-debug.apk sur le téléphone et l'installer
+# ══════════════════════════════════════════════════════════════════
+name: Compiler l'APK SMAP
+
+on:
+  push:
+  workflow_dispatch:      # bouton « Run workflow » manuel dans l'onglet Actions
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: SDK Android
+        uses: android-actions/setup-android@v3
+
+      - name: Gradle 8.9
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: "8.9"
+
+      - name: Compiler (APK de débogage)
+        run: gradle assembleDebug --no-daemon
+
+      - name: Publier l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: smap-collecteur-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30

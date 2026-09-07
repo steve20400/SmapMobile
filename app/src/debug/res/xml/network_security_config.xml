@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Version de DÉBOGAGE uniquement — ce fichier n'est jamais embarqué dans un
+  APK de production, Gradle le remplace par celui de src/main.
+
+  Pourquoi : l'application refusait tout trafic en clair, ce qui interdisait de
+  viser le serveur sur le réseau local (http://192.168.x.x:8100). Il fallait
+  donc obligatoirement un tunnel Cloudflare — or l'URL d'un tunnel rapide
+  change à chaque redémarrage, laissant les lots en attente pointer vers un
+  hôte qui n'existe plus (« Unable to resolve host »).
+
+  Sur le réseau local d'un domicile ou d'un campus, en phase d'essai, le clair
+  est acceptable. Il ne le sera plus le jour du pilote : on repassera par une
+  URL stable en https.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true"/>
+</network-security-config>

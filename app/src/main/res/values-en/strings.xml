@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  English strings. Same keys as values/strings.xml (French, the default).
+  Field terms are kept deliberately concrete: "landmark", "batch", "survey" —
+  these are the words agents use, not software jargon.
+-->
+<resources>
+    <string name="app_name">SMAP Collector</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Tour</string>
+    <string name="nav_collect">Collect</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_sync">Sync</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Precision ring -->
+    <string name="precision_excellent">EXCELLENT</string>
+    <string name="precision_medium">MEDIUM</string>
+    <string name="precision_poor">POOR</string>
+    <string name="precision_meters">METERS · %1$s</string>
+
+    <!-- Tour -->
+    <string name="home_registered">Device registered · ready</string>
+    <string name="home_configure">Configure the server in Settings</string>
+    <string name="stat_state">State</string>
+    <string name="state_active">ACTIVE</string>
+    <string name="state_stopped">STOPPED</string>
+    <string name="stat_points">Points</string>
+    <string name="stat_distance">Distance</string>
+    <string name="stat_pending">Pending batches</string>
+    <string name="stat_rate">Rate</string>
+    <string name="btn_start_collect">Start collecting</string>
+    <string name="btn_resume_collect">Back to collection screen</string>
+    <string name="btn_property_no_survey">Property form (no survey)</string>
+    <string name="btn_anchor">Place an anchor (scan a code)</string>
+
+    <!-- Collect -->
+    <string name="collect_active">COLLECTING</string>
+    <string name="collect_stopped">COLLECTION STOPPED</string>
+    <string name="collect_hint">Stand still in front of the property gate before starting the survey.</string>
+    <string name="btn_mark_property">⏺  Mark a property here (60 s)</string>
+    <string name="btn_stop_collect">Stop collecting</string>
+
+    <!-- 60 s survey -->
+    <string name="survey_seconds_left">SECONDS LEFT</string>
+    <string name="survey_stay_still">Stay still</string>
+    <string name="survey_posture">Phone at chest height, screen facing the open sky.</string>
+    <string name="survey_live_precision">Estimated point precision: ±%1$s m</string>
+    <string name="survey_auto_stop">The survey stops on its own once the target precision is reached.</string>
+
+    <!-- Property form -->
+    <string name="property_title">New property</string>
+    <string name="property_linked_survey">Linked survey: %1$s — the consolidated position will be used</string>
+    <string name="property_type">Type (villa, studio, room, apartment)</string>
+    <string name="property_rooms">Number of rooms</string>
+    <string name="property_rent">Monthly rent (FCFA)</string>
+    <string name="property_neighborhood">Neighbourhood</string>
+    <string name="property_landmark">Landmark (required) — "past the pharmacy, blue gate"</string>
+    <string name="property_saved">✓ Saved — sending automatically</string>
+    <string name="property_save">Save property</string>
+    <string name="property_landmark_short">The landmark needs at least 10 characters — describe it as you would to a taxi driver.</string>
+
+    <!-- Sync -->
+    <string name="sync_title">Synchronisation</string>
+    <string name="sync_subtitle">Nothing is deleted before server confirmation + 7 days</string>
+    <string name="sync_send">Send</string>
+    <string name="sync_export">Export to a file</string>
+    <string name="sync_export_nothing">Nothing pending — no file produced.</string>
+    <string name="sync_export_ready">File ready: %1$s</string>
+    <string name="sync_export_chooser">Send batches (Bluetooth, cable, messaging…)</string>
+    <string name="batch_pending">PENDING</string>
+    <string name="batch_uploading">SENDING…</string>
+    <string name="batch_acked">✓ CONFIRMED</string>
+    <string name="batch_points">%1$d points</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="delete_unsent_title">Delete an unsent survey?</string>
+    <string name="delete_title">Delete this batch?</string>
+    <string name="delete_unsent_body">This batch of %1$d point(s) was never confirmed by the server. It exists only on this phone: deletion is permanent and the collected data will be lost.</string>
+    <string name="delete_acked_body">This batch was confirmed by the server. It remains stored there; only the local copy is erased.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_registered">Device registered: %1$s</string>
+    <string name="settings_not_registered">Not registered</string>
+    <string name="settings_url">Server URL (https://api.smap.cm)</string>
+    <string name="settings_device_name">Device name (A-01…)</string>
+    <string name="settings_agent">Agent name</string>
+    <string name="settings_scan_url">Scan the address from the console</string>
+    <string name="settings_test">Test connection</string>
+    <string name="settings_testing">Testing…</string>
+    <string name="settings_reachable">✓ Server reachable — you can register</string>
+    <string name="settings_unreachable">Unreachable: %1$s</string>
+    <string name="settings_register">Register this device</string>
+    <string name="settings_registered_ok">✓ Registered: %1$s</string>
+    <string name="settings_failed">Failed: %1$s</string>
+    <string name="settings_key_note">This device\'s private key is generated in the Android Keystore and never leaves it. If the phone is stolen, revoke the device from the console.</string>
+    <string name="settings_language">App language</string>
+    <string name="settings_language_note">The change applies immediately to the whole app.</string>
+    <string name="lang_fr">Français</string>
+    <string name="lang_en">English</string>
+
+    <!-- Scan (anchor / configuration) -->
+    <string name="scan_config_title">Configure via QR</string>
+    <string name="scan_anchor_title">Place an anchor</string>
+    <string name="scan_config_hint">Scan the QR shown by the console to fill in the server address.</string>
+    <string name="scan_anchor_hint">Scan any code already stuck on the building. Never on furniture: an anchor that moves corrupts the whole corridor.</string>
+    <string name="scan_camera_needed">The camera is needed to read a code.</string>
+    <string name="scan_allow_camera">Allow camera</string>
+    <string name="scan_aim">Aim at the code — reading is automatic.</string>
+    <string name="scan_code_read">Code read</string>
+    <string name="scan_use_address">Use this address</string>
+    <string name="scan_address_saved">Address saved: %1$s</string>
+    <string name="scan_building">Building code (ENSP-B)</string>
+    <string name="scan_level">Level (0 = ground floor)</string>
+    <string name="scan_where">Where is this code? (corridor electrical panel…)</string>
+    <string name="scan_place_anchor">Place the anchor here</string>
+    <string name="scan_no_position">Unknown position — go outside to get a GPS fix, or start collecting for a few seconds.</string>
+    <string name="scan_anchor_saved">Anchor saved — it will be sent at the next synchronisation.</string>
+    <string name="scan_another">Scan another code</string>
+
+    <!-- Map -->
+    <string name="map_title">Map</string>
+    <string name="map_subtitle">What is collected on THIS phone, sent or not</string>
+    <string name="map_no_position">Position unavailable — turn on location</string>
+    <string name="map_my_position">⌖ My position</string>
+    <string name="map_search">Search this device\'s surveys</string>
+    <string name="map_track">Track %1$d</string>
+    <string name="map_point_a">Point A set. Tap a second point on the same track.</string>
+    <string name="map_distance">%1$s along the track · %2$s as the crow flies</string>
+    <string name="map_approx_position"> — approximate position, awaiting server consolidation</string>
+    <string name="map_clear">Clear</string>
+    <string name="map_legend">Legend</string>
+    <string name="map_legend_hide">Hide legend</string>
+    <string name="map_legend_track">— Ochre line: street recorded on this device</string>
+    <string name="map_legend_property">◉ Marker: saved property, approximate position</string>
+    <string name="map_legend_measure">Tap two points on the same track to measure.</string>
+    <string name="map_legend_counts">%1$d track(s) · %2$d point(s) · %3$d propert(y/ies) stored locally</string>
+
+    <!-- Collection service (persistent notification) -->
+    <string name="notif_channel">SMAP collection</string>
+    <string name="notif_title">SMAP — collecting</string>
+    <string name="notif_text">Positions are being saved on the phone</string>
+</resources>

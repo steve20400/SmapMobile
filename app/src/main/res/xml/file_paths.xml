@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Seul le sous-dossier des exports est partageable. On n'expose jamais le
+     cache entier : la base chiffrée et les photos n'ont rien à y faire. -->
+<paths>
+    <cache-path name="exports" path="exports/"/>
+</paths>

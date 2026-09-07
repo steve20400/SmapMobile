@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Textes de l'application — français, langue par défaut.
+  La version anglaise vit dans values-en/strings.xml avec les MÊMES clés.
+  Toute chaîne visible par l'agent passe par ici : une chaîne en dur dans le
+  code Kotlin ne serait pas traduite quand l'agent bascule en anglais.
+-->
+<resources>
+    <string name="app_name">SMAP Collecteur</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Tournée</string>
+    <string name="nav_collect">Collecte</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_sync">Synchro</string>
+    <string name="nav_settings">Réglages</string>
+
+    <!-- Anneau de précision -->
+    <string name="precision_excellent">EXCELLENTE</string>
+    <string name="precision_medium">MOYENNE</string>
+    <string name="precision_poor">FAIBLE</string>
+    <string name="precision_meters">MÈTRES · %1$s</string>
+
+    <!-- Tournée -->
+    <string name="home_registered">Appareil enregistré · prêt</string>
+    <string name="home_configure">Configurez le serveur dans Réglages</string>
+    <string name="stat_state">État</string>
+    <string name="state_active">ACTIVE</string>
+    <string name="state_stopped">ARRÊTÉE</string>
+    <string name="stat_points">Points</string>
+    <string name="stat_distance">Distance</string>
+    <string name="stat_pending">Lots en attente</string>
+    <string name="stat_rate">Cadence</string>
+    <string name="btn_start_collect">Démarrer la collecte</string>
+    <string name="btn_resume_collect">Reprendre l\'écran de collecte</string>
+    <string name="btn_property_no_survey">Fiche d\'un bien (sans relevé)</string>
+    <string name="btn_anchor">Poser une ancre (scanner un code)</string>
+
+    <!-- Collecte -->
+    <string name="collect_active">COLLECTE ACTIVE</string>
+    <string name="collect_stopped">COLLECTE ARRÊTÉE</string>
+    <string name="collect_hint">Immobilisez-vous devant le portail du bien avant de lancer le relevé.</string>
+    <string name="btn_mark_property">⏺  Marquer un bien ici (60 s)</string>
+    <string name="btn_stop_collect">Arrêter la collecte</string>
+
+    <!-- Relevé 60 s -->
+    <string name="survey_seconds_left">SECONDES RESTANTES</string>
+    <string name="survey_stay_still">Restez immobile</string>
+    <string name="survey_posture">Téléphone à hauteur de poitrine, écran vers le ciel dégagé.</string>
+    <string name="survey_live_precision">Précision estimée du point : ±%1$s m</string>
+    <string name="survey_auto_stop">Le relevé s\'arrête tout seul dès que la précision cible est atteinte.</string>
+
+    <!-- Fiche du bien -->
+    <string name="property_title">Nouveau bien</string>
+    <string name="property_linked_survey">Relevé lié : %1$s — la position consolidée sera utilisée</string>
+    <string name="property_type">Type (villa, studio, chambre, appartement)</string>
+    <string name="property_rooms">Nombre de pièces</string>
+    <string name="property_rent">Loyer mensuel (FCFA)</string>
+    <string name="property_neighborhood">Quartier</string>
+    <string name="property_landmark">Point de repère (obligatoire) — « après la pharmacie, portail bleu »</string>
+    <string name="property_saved">✓ Enregistré — envoi automatique</string>
+    <string name="property_save">Enregistrer le bien</string>
+    <string name="property_landmark_short">Le repère doit faire au moins 10 caractères — décrivez comme à un taxi.</string>
+
+    <!-- Synchronisation -->
+    <string name="sync_title">Synchronisation</string>
+    <string name="sync_subtitle">Rien n\'est supprimé avant confirmation du serveur + 7 jours</string>
+    <string name="sync_send">Envoyer</string>
+    <string name="sync_export">Exporter vers un fichier</string>
+    <string name="sync_export_nothing">Rien en attente — aucun fichier produit.</string>
+    <string name="sync_export_ready">Fichier prêt : %1$s</string>
+    <string name="sync_export_chooser">Envoyer les lots (Bluetooth, câble, messagerie…)</string>
+    <string name="batch_pending">EN ATTENTE</string>
+    <string name="batch_uploading">ENVOI…</string>
+    <string name="batch_acked">✓ CONFIRMÉ</string>
+    <string name="batch_points">%1$d points</string>
+    <string name="btn_delete">Supprimer</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="delete_unsent_title">Supprimer un relevé non envoyé ?</string>
+    <string name="delete_title">Supprimer ce lot ?</string>
+    <string name="delete_unsent_body">Ce lot de %1$d point(s) n\'a jamais été confirmé par le serveur. Il n\'existe que sur ce téléphone : la suppression est définitive et la collecte sera perdue.</string>
+    <string name="delete_acked_body">Ce lot a été confirmé par le serveur. Il y reste enregistré ; seule la copie locale est effacée.</string>
+
+    <!-- Réglages -->
+    <string name="settings_title">Réglages</string>
+    <string name="settings_registered">Appareil enregistré : %1$s</string>
+    <string name="settings_not_registered">Non enregistré</string>
+    <string name="settings_url">URL du serveur (https://api.smap.cm)</string>
+    <string name="settings_device_name">Nom de l\'appareil (A-01…)</string>
+    <string name="settings_agent">Nom de l\'agent</string>
+    <string name="settings_scan_url">Scanner l\'adresse depuis la console</string>
+    <string name="settings_test">Tester la connexion</string>
+    <string name="settings_testing">Test en cours…</string>
+    <string name="settings_reachable">✓ Serveur joignable — vous pouvez enregistrer</string>
+    <string name="settings_unreachable">Injoignable : %1$s</string>
+    <string name="settings_register">Enregistrer cet appareil</string>
+    <string name="settings_registered_ok">✓ Enregistré : %1$s</string>
+    <string name="settings_failed">Échec : %1$s</string>
+    <string name="settings_key_note">La clé privée de cet appareil est générée dans le Keystore Android et n\'en sort jamais. En cas de vol, révoquez l\'appareil depuis la console.</string>
+    <string name="settings_language">Langue de l\'application</string>
+    <string name="settings_language_note">Le changement s\'applique immédiatement à toute l\'application.</string>
+    <string name="lang_fr">Français</string>
+    <string name="lang_en">English</string>
+
+    <!-- Scan (ancre / configuration) -->
+    <string name="scan_config_title">Configurer par QR</string>
+    <string name="scan_anchor_title">Poser une ancre</string>
+    <string name="scan_config_hint">Scannez le QR affiché par la console pour renseigner l\'adresse du serveur.</string>
+    <string name="scan_anchor_hint">Scannez n\'importe quel code déjà collé sur le bâtiment. Jamais sur un meuble : une ancre qui déménage fausse tout le couloir.</string>
+    <string name="scan_camera_needed">La caméra est nécessaire pour lire un code.</string>
+    <string name="scan_allow_camera">Autoriser la caméra</string>
+    <string name="scan_aim">Visez le code — la lecture est automatique.</string>
+    <string name="scan_code_read">Code lu</string>
+    <string name="scan_use_address">Utiliser cette adresse</string>
+    <string name="scan_address_saved">Adresse enregistrée : %1$s</string>
+    <string name="scan_building">Code du bâtiment (ENSP-B)</string>
+    <string name="scan_level">Niveau (0 = rez-de-chaussée)</string>
+    <string name="scan_where">Où est ce code ? (tableau électrique du couloir…)</string>
+    <string name="scan_place_anchor">Poser l\'ancre ici</string>
+    <string name="scan_no_position">Position inconnue — sortez capter le GPS, ou démarrez la collecte quelques secondes.</string>
+    <string name="scan_anchor_saved">Ancre enregistrée — elle partira à la prochaine synchronisation.</string>
+    <string name="scan_another">Scanner un autre code</string>
+
+    <!-- Carte -->
+    <string name="map_title">Carte</string>
+    <string name="map_subtitle">Ce qui est collecté sur CE téléphone, envoyé ou non</string>
+    <string name="map_no_position">Position indisponible — activez la localisation</string>
+    <string name="map_my_position">⌖ Ma position</string>
+    <string name="map_search">Rechercher parmi les relevés de cet appareil</string>
+    <string name="map_track">Tracé %1$d</string>
+    <string name="map_point_a">Point A posé. Touchez un second point du même tracé.</string>
+    <string name="map_distance">%1$s le long du tracé · %2$s à vol d\'oiseau</string>
+    <string name="map_approx_position"> — position approchée, en attente de consolidation serveur</string>
+    <string name="map_clear">Effacer</string>
+    <string name="map_legend">Légende</string>
+    <string name="map_legend_hide">Masquer la légende</string>
+    <string name="map_legend_track">— Trait ocre : rue relevée sur cet appareil</string>
+    <string name="map_legend_property">◉ Repère : bien enregistré, position approchée</string>
+    <string name="map_legend_measure">Touchez deux points d\'un même tracé pour mesurer.</string>
+    <string name="map_legend_counts">%1$d tracé(s) · %2$d point(s) · %3$d bien(s) en local</string>
+
+    <!-- Service de collecte (notification permanente) -->
+    <string name="notif_channel">Collecte SMAP</string>
+    <string name="notif_title">SMAP — collecte active</string>
+    <string name="notif_text">Les positions sont enregistrées sur le téléphone</string>
+</resources>

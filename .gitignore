@@ -1,0 +1,21 @@
+# Sorties de compilation — regenerees a chaque build, jamais versionnees
+build/
+app/build/
+.gradle/
+*.apk
+*.aab
+
+# Configuration propre a une machine : chemin du SDK, cles de signature
+local.properties
+*.jks
+*.keystore
+
+# Editeurs
+.idea/
+*.iml
+.vscode/
+.kotlin/
+
+# Divers
+*.log
+.DS_Store
